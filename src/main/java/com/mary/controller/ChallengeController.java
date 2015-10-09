@@ -84,7 +84,9 @@ public class ChallengeController {
 						int no_of_disfunctional = community_disfunctionals.get(i);
 						int total_per_community = no_of_disfunctional + no_of_functional;
 						double ranking = (no_of_disfunctional * 100) / total_per_community;
-						jobj.put(community, new JSONObject().put("ranking", ranking + "%").put("total_water_points", total_per_community).put("functional_water_points", no_of_functional).put("non_functional_water_points", no_of_disfunctional));
+					/* List of Functional water Points , Non_functional and total water points*/
+					//jobj.put(community, new JSONObject().put("ranking", ranking + "%").put("total_water_points", total_per_community).put("functional_water_points", no_of_functional).put("non_functional_water_points", no_of_disfunctional));
+						jobj.put(community, new JSONObject().put("ranking", ranking + "%").put("functional_water_points", no_of_functional));
 						jArray.put(jobj);
 					}
 					jsonObject.put("community_data", jArray);
